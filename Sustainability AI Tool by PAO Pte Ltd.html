@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool for Sustainability - Pitch Deck</title>
+    <style>
+        /* Universal styling */
+        body, h1, h2, h3, p, ul, ol, li {
+            color: white; /* Ensure text is visible on dark background */
+            text-align: center; /* Center align all text */
+        }
+
+        /* Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Reduced background opacity by 50% */
+            overflow: hidden; /* Remove scrollbars to ensure particles fill the page */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Center align text within the slides */
+            padding: 20px;
+            opacity: 0; /* Initial state for fade-in effect */
+            animation: fadeIn 2.5s ease-in-out forwards; /* Increased fade-in duration to 2.5 seconds */
+        }
+
+        .slide h1, .slide h2, .slide h3 {
+            margin: 10px 0;
+            font-family: 'Open Sans', sans-serif; /* Updated font */
+        }
+
+        .slide h1 { font-size: 3rem; }
+        .slide h2 { font-size: 2.5rem; }
+        .slide h3 { font-size: 2rem; }
+        .slide p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            text-align: center; /* Center align lists */
+            max-width: 80%;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            list-style-type: none; /* Remove bullet points from lists */
+            padding: 0; /* Remove default padding */
+        }
+
+        li { margin-bottom: 10px; }
+
+        /* Dots Navigation */
+        .navigation {
+            position: fixed;
+            bottom: 50px; /* Positioned above the footer */
+            width: 100%;
+            text-align: center;
+        }
+
+        .navigation .dot {
+            height: 2px; /* Reduced size by 80% */
+            width: 2px; /* Reduced size by 80% */
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation .dot.active {
+            background-color: #add8e6; /* Changed color to pale blue */
+            animation: glow 3.5s infinite; /* Enhanced the pulsation effect */
+        }
+
+        @keyframes glow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px #add8e6;
+            }
+            50% {
+                transform: scale(3); /* Increased scale for pulsation */
+                box-shadow: 0 0 60px #add8e6; /* Increased glow intensity */
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px #add8e6;
+            }
+        }
+
+        .logo {
+            position: fixed; /* Fixed position for logo */
+            top: 20px; /* Position at the top */
+            left: 20px; /* Align to the left */
+            width: 84px; /* Adjusted size */
+            height: auto;
+            z-index: 10; /* Ensure it stays above other elements */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.63rem; /* Reduced font size by 30% */
+            color: white; /* Changed font color to white */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Particles.js container */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Black background for particles */
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            z-index: -1; /* Ensure particles stay behind content */
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- Company Logo -->
+    <img class="logo" src="https://github.com/Stlai92/assets/raw/main/pao_png_web.png" alt="Company Logo">
+
+    <!-- Content Slides -->
+    <div class="slide" id="slide1">
+        <h1>AI Tool for Sustainability</h1>
+        <h2>Technical Architecture Pitch Deck</h2>
+        <p>Driving transparency, accountability, and growth through AI-powered measurement and reporting.</p>
+    </div>
+
+    <div class="slide" id="slide2" style="display: none;">
+        <h2>Objective</h2>
+        <p>Create an AI tool to measure and analyze carbon footprints, greenhouse gas emissions, and other sustainability metrics.</p>
+    </div>
+
+    <div class="slide" id="slide3" style="display: none;">
+        <h2>Core Capabilities</h2>
+        <p>Our tool includes the following capabilities:</p>
+        <ul>
+            <li>Data Collection: Automate collection from IoT sensors, energy meters, and supply chain systems.</li>
+            <li>Carbon Footprint Calculation: Implement algorithms to calculate Scope 1, Scope 2, and Scope 3 emissions.</li>
+            <li>Visualization: Generate dashboards to display emissions data, trends, and progress toward goals.</li>
+            <li>Predictive Analytics: Use machine learning models to forecast future emissions and provide actionable recommendations.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide4" style="display: none;">
+        <h2>Technical Stack</h2>
+        <ul>
+            <li>Data Pipeline: Tools like Apache Kafka, AWS IoT, or Google Cloud Pub/Sub.</li>
+            <li>Data Storage: AWS S3, Azure Blob Storage, or Google BigQuery for scalable data storage.</li>
+            <li>AI & ML Models: TensorFlow, PyTorch, or Scikit-learn for analytics and forecasting.</li>
+            <li>Visualization: Tableau, Power BI, or D3.js for interactive dashboards.</li>
+            <li>APIs: RESTful APIs for integration with third-party systems and frameworks.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide5" style="display: none;">
+        <h2>Development Phases</h2>
+        <ol>
+            <li>Research and Design (1-2 Months): Gather requirements, identify metrics, and design architecture.</li>
+            <li>Data Collection and Preparation (2-3 Months): Integrate data sources and preprocess data.</li>
+            <li>Model Development (3-4 Months): Train and validate machine learning models.</li>
+            <li>Tool Development and Testing (3 Months): Build user interfaces and test with pilot users.</li>
+            <li>Deployment and Maintenance (Ongoing): Deploy on cloud infrastructure and improve models continuously.</li>
+        </ol>
+    </div>
+
+    <div class="slide" id="slide6" style="display: none;">
+        <h2>Future Enhancements</h2>
+        <ul>
+            <li>Blockchain Integration: For immutability and transparency in carbon credit tracking.</li>
+            <li>Gamification: To incentivize sustainable behaviors among employees and stakeholders.</li>
+            <li>Multi-lingual Support: To cater to global users and expand accessibility.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+    <div class="footer">©2022 - 2025 PAO Pte Ltd | All Rights Reserved</div>
+
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 0.36, direction: "none", random: true, straight: false, out_mode: "out", bounce: false } /* Reduced speed by 70% */
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 200, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+
+        /* Slide Navigation */
+        let currentSlideIndex = 1;
+        const totalSlides = 6;
+
+        function showSlide(slideNumber) {
+            for (let i = 1; i <= totalSlides; i++) {
+                const slide = document.getElementById(`slide${i}`);
+                slide.style.display = i === slideNumber ? 'flex' : 'none';
+            }
+            updateDots(slideNumber);
+        }
+
+        function currentSlide(slideNumber) {
+            currentSlideIndex = slideNumber;
+            showSlide(slideNumber);
+        }
+
+        function updateDots(slideNumber) {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === slideNumber - 1) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        /* Keyboard Navigation */
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "ArrowRight") {
+                if (currentSlideIndex < totalSlides) {
+                    currentSlideIndex++;
+                    showSlide(currentSlideIndex);
+                }
+            } else if (event.key === "ArrowLeft") {
+                if (currentSlideIndex > 1) {
+                    currentSlideIndex--;
+                    showSlide(currentSlideIndex);
+                }
+            }
+        });
+
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
