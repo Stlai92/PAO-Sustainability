@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability ERP Tool for Sport Singapore</title>
+    <style>
+        /* Universal styling */
+        body, h1, h2, h3, p, ul, ol, li {
+            color: white;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 2.5s ease-in-out forwards;
+        }
+
+        .slide h1, .slide h2 {
+            margin: 10px 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .slide h1 { font-size: 3rem; }
+        .slide h2 { font-size: 2.5rem; }
+        .slide p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            max-width: 80%;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li { margin-bottom: 10px; }
+
+        /* Navigation dots */
+        .navigation {
+            position: fixed;
+            bottom: 50px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navigation .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation .dot.active {
+            background-color: #add8e6;
+            animation: glow 3.5s infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px #add8e6;
+            }
+            50% {
+                transform: scale(1.5);
+                box-shadow: 0 0 40px #add8e6;
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px #add8e6;
+            }
+        }
+
+        /* Particles.js container */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- Content Slides -->
+    <div class="slide" id="slide1">
+        <h1>Transforming Sustainability Management</h1>
+        <h2>The Future of Sustainability ERP Tools for Sport Singapore</h2>
+        <p>Enabling compliance, efficiency, and transparency in green reporting.</p>
+    </div>
+
+    <div class="slide" id="slide2" style="display: none;">
+        <h2>The Problem</h2>
+        <ul>
+            <li><strong>Mandatory Green Reporting:</strong> Regulations in Singapore mandate organizations to report sustainability metrics.</li>
+            <li><strong>Data Silos:</strong> Challenges in consolidating sustainability data across departments.</li>
+            <li><strong>Lack of Standardized Tools:</strong> Existing tools lack specificity for sports organizations.</li>
+            <li><strong>Increased Stakeholder Pressure:</strong> Rising expectations for sustainability transparency.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide3" style="display: none;">
+        <h2>The Solution</h2>
+        <p><strong>Introducing the Sustainability ERP Tool</strong></p>
+        <ul>
+            <li>Automates sustainability data collection and reporting.</li>
+            <li>Ensures compliance with Singapore's green reporting standards.</li>
+            <li>Streamlines operations for sports organizations.</li>
+            <li>Provides actionable insights to achieve sustainability goals.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide4" style="display: none;">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Real-Time Data Monitoring: Track energy, water, waste, and carbon emissions.</li>
+            <li>Automated Reporting: Generate reports aligned with Singapore's standards.</li>
+            <li>Custom Dashboards: Tailored views for executives and operational teams.</li>
+            <li>Predictive Analytics: Forecast environmental impacts.</li>
+            <li>Integration Capabilities: Seamless integration with IoT systems.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide5" style="display: none;">
+        <h2>Benefits</h2>
+        <ul>
+            <li>Ensure Compliance: Meet mandatory green reporting regulations.</li>
+            <li>Operational Efficiency: Save time with automated processes.</li>
+            <li>Enhanced Performance: Exceed sustainability targets with actionable insights.</li>
+            <li>Reputation Management: Lead in sustainability within the sports sector.</li>
+        </ul>
+    </div>
+
+    <div class="slide" id="slide6" style="display: none;">
+        <h2>The Roadmap</h2>
+        <ol>
+            <li><strong>Phase 1:</strong> Product Development (Q3 2025) - Develop core features with input from Sport Singapore and regulatory bodies.</li>
+            <li><strong>Phase 2:</strong> Pilot Program (Q1 2026) - Launch pilot with Sport Singapore.</li>
+            <li><strong>Phase 3:</strong> Full Deployment (Q3 2026) - Roll out to other organizations in Singapore.</li>
+        </ol>
+    </div>
+
+    <div class="slide" id="slide7" style="display: none;">
+        <h2>Why Us?</h2>
+        <ul>
+            <li><strong>Domain Expertise:</strong> Proven experience in developing ERP tools for niche industries.</li>
+            <li><strong>Singapore-Focused:</strong> Deep understanding of Singapore’s sustainability landscape and regulatory requirements.</li>
+            <li><strong>Customizable Solutions:</strong> Tailored to meet the unique needs of sports organizations.</li>
+            <li><strong>End-to-End Support:</strong> From implementation to training and ongoing updates.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 0.36, direction: "none", random: true, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 200, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+
+        /* Slide Navigation */
+        let currentSlideIndex = 1;
+        const totalSlides = 7;
+
+        function showSlide(slideNumber) {
+            for (let i = 1; i <= totalSlides; i++) {
+                const slide = document.getElementById(`slide${i}`);
+                slide.style.display = i === slideNumber ? 'flex' : 'none';
+            }
+            updateDots(slideNumber);
+        }
+
+        function currentSlide(slideNumber) {
+            currentSlideIndex = slideNumber;
+            showSlide(slideNumber);
+        }
+
+        function updateDots(slideNumber) {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === slideNumber - 1) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        /* Keyboard Navigation */
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "ArrowRight" && currentSlideIndex < totalSlides) {
+                currentSlideIndex++;
+                showSlide(currentSlideIndex);
+            } else if (event.key === "ArrowLeft" && currentSlideIndex > 1) {
+                currentSlideIndex--;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
